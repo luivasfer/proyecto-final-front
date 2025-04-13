@@ -67,7 +67,7 @@ const TaskManager = () => {
     console.log(task);
     try {
       const response = await axios.put(
-        `/tasks/${task.id}`,
+        `${API_URL}/tasks/${task.id}`,
         { title: task.title, description: task.description, state: newStatus },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -95,7 +95,7 @@ const TaskManager = () => {
   const handleDelete = async (id) => {
     if (window.confirm("¿Seguro que quieres eliminar esta tarea?")) {
       try {
-        await axios.delete(`/tasks/${id}`, {
+        await axios.delete(`${API_URL}/tasks/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setSuccess("Tarea eliminada con éxito");
