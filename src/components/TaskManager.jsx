@@ -22,7 +22,7 @@ const TaskManager = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get(`${API_URL}/tasks`, {
+      const response = await axios.get(`/tasks`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       console.log("Tareas recibidas:", response.data); // Log para depurar
@@ -41,7 +41,7 @@ const TaskManager = () => {
     try {
       if (editingTask) {
         const response = await axios.put(
-          `${API_URL}/tasks/${editingTask.id}`,
+          `/tasks/${editingTask.id}`,
           { title, description, state: editingTask.state },
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -49,7 +49,7 @@ const TaskManager = () => {
         setEditingTask(null);
       } else {
         const response = await axios.post(
-          `${API_URL}/tasks`,
+          `/tasks`,
           { title, description },
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -67,7 +67,7 @@ const TaskManager = () => {
     console.log(task);
     try {
       const response = await axios.put(
-        `${API_URL}/tasks/${task.id}`,
+        `/tasks/${task.id}`,
         { title: task.title, description: task.description, state: newStatus },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -95,7 +95,7 @@ const TaskManager = () => {
   const handleDelete = async (id) => {
     if (window.confirm("¿Seguro que quieres eliminar esta tarea?")) {
       try {
-        await axios.delete(`${API_URL}/tasks/${id}`, {
+        await axios.delete(`/tasks/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setSuccess("Tarea eliminada con éxito");
