@@ -156,7 +156,7 @@ const TaskManager = () => {
       {/* listado detareas */}
 
       <div>
-        <h3>tareas</h3>
+        <h3>Tareas</h3>
         <div className="filter-group">
         <label>Filtrar por estado:</label>
         <select
