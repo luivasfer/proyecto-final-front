@@ -41,7 +41,7 @@ const TaskManager = () => {
     try {
       if (editingTask) {
         const response = await axios.put(
-          `/tasks/${editingTask.id}`,
+          `${API_URL}/tasks/${editingTask.id}`,
           { title, description, state: editingTask.state },
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -49,7 +49,7 @@ const TaskManager = () => {
         setEditingTask(null);
       } else {
         const response = await axios.post(
-          `/tasks`,
+          `${API_URL}/tasks`,
           { title, description },
           { headers: { Authorization: `Bearer ${token}` } }
         );
