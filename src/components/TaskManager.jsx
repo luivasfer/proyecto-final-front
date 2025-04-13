@@ -6,7 +6,7 @@ const API_URL = 'https://proyecto-final-tjsm.onrender.com/api';
 
 const TaskManager = () => {
   const [tasks, setTasks] = useState([]);
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [editingTask, setEditingTask] = useState(null);
   const [error, setError] = useState('');
@@ -22,7 +22,7 @@ const TaskManager = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get(`/tasks`, {
+      const response = await axios.get(`${API_URL}/tasks`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       console.log("Tareas recibidas:", response.data); // Log para depurar
