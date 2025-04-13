@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./TaskManager.css";
 import { Icon } from "@iconify/react";
-const API_URL = 'https://proyecto-final-tjsm.onrender.com';
+const API_URL = 'https://proyecto-final-tjsm.onrender.com/api';
 
 const TaskManager = () => {
   const [tasks, setTasks] = useState([]);

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import './Register.css';
-const API_URL = 'https://proyecto-final-tjsm.onrender.com';
+const API_URL = 'https://proyecto-final-tjsm.onrender.com/api';
 
 
 const Register = () => {

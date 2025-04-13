@@ -9,7 +9,7 @@ const Login = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const navigate = useNavigate();
-  const API_URL = 'https://proyecto-final-tjsm.onrender.com';
+  const API_URL = 'https://proyecto-final-tjsm.onrender.com/api';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
