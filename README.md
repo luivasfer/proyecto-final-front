@@ -12,12 +12,12 @@ Este es un proyecto Frontend desarrollado con React + Vite, diseñado para manej
 
 1. Clona el repositorio:
 ```bash
-git clone https://github.com/tuusuario/nombre-del-proyecto-frontend.git
+git clone https://github.com/luivasfer/proyecto-final-front.git
 ```
 
 2. ingresa a la carpeta del proyecto:
 ```bash
-cd nombre-del-proyecto-frontend
+cd proyecto-final-front
 ```
 
 3. Instala las dependencias:
