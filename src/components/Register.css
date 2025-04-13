@@ -1,0 +1,29 @@
+.register-container {
+  width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+  border-radius: 10px;
+  color: gray;
+  background: #e6f9ff;
+  background: linear-gradient(
+    137deg,
+    rgba(230, 249, 255, 1) 32%,
+    rgba(255, 255, 235, 1) 100%
+  );
+}
+
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.success {
+  color: green;
+  margin-bottom: 10px;
+}
+
+
