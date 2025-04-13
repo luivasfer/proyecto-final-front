@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./TaskManager.css";
 import { Icon } from "@iconify/react";
+const API_URL = 'https://proyecto-final-tjsm.onrender.com';
 
 const TaskManager = () => {
   const [tasks, setTasks] = useState([]);
@@ -12,7 +13,6 @@ const TaskManager = () => {
   const [success, setSuccess] = useState('');
   const [filterStatus, setFilterStatus] = useState('all');
 
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
 
   const token = localStorage.getItem("token");
 

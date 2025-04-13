@@ -9,7 +9,7 @@ const Login = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const navigate = useNavigate();
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+  const API_URL = 'https://proyecto-final-tjsm.onrender.com';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
