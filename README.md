@@ -1,8 +1,7 @@
 # PROYECTO FINAL FRONTEND - React + Vite
 
 ## POR LUIS VASQUEZ FERNANDEZ
-
-
+Este es un proyecto Frontend desarrollado con React + Vite, diseñado para manejar administrar tareas
 
 ## 🚀 Tecnologías Utilizadas
 
