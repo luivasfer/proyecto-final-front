@@ -9,6 +9,7 @@ const Login = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const navigate = useNavigate();
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,7 +17,7 @@ const Login = () => {
     setSuccess('');
 
     try {
-      const response = await axios.post('http://localhost:3000/api/login', {
+      const response = await axios.post(`${API_URL}/login`, {
         username,
         password
       });
@@ -25,7 +26,7 @@ const Login = () => {
       localStorage.setItem('user', JSON.stringify(response.data.user));
 
       setSuccess(`¡Login exitoso! Bienvenido ${response.data.user.username}`);
-      setTimeout(() => navigate('/tasks'), 1000); // Redirigir después de 1 segundo
+      setTimeout(() => navigate(`${API_URL}/tasks`), 1000); 
     } catch (err) {
       setError(err.response?.data?.error || 'Error al iniciar sesión');
     }
