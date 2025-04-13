@@ -26,7 +26,7 @@ const Login = () => {
       localStorage.setItem('user', JSON.stringify(response.data.user));
 
       setSuccess(`¡Login exitoso! Bienvenido ${response.data.user.username}`);
-      setTimeout(() => navigate(`${API_URL}/tasks`), 1000); 
+      setTimeout(() => navigate('/tasks'), 1000); 
     } catch (err) {
       setError(err.response?.data?.error || 'Error al iniciar sesión');
     }
